@@ -89,6 +89,7 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
     ;; Line highlighting
     `(highlight ((t (:background ,jell-bg+1 :foreground nil))))
     `(highlight-current-line-face ((t (:background ,jell-bg+1 :foreground nil))))
+    `(hl-line ((t (:background ,jell-bg+1))))
 
     ;; Calendar
     `(holiday-face ((t (:foreground ,jell-red))))
@@ -164,10 +165,10 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
     `(magit-branch ((t (:foreground ,jell-quartz+1))))
     `(magit-section-title ((t (:foreground ,jell-yellow))))
     `(magit-item-highlight ((t (:inherit highlight))))
+    `(magit-log-head-label-tags ((t (:foreground ,jell-yellow :box t))))
     `(magit-log-head-label-remote ((t (:foreground ,jell-green :box t))))
     `(magit-log-head-label-local ((t (:foreground ,jell-blue :box t))))
     `(magit-log-graph ((t (:foreground ,jell-quartz))))
-
     `(magit-diff-del ((t (:inherit diff-removed))))))
 
 
