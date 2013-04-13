@@ -38,20 +38,23 @@ a.k.a. rexim.")
       (gruber-darker-black+1  "#111")
       (gruber-darker-white    "white")
       (gruber-darker-fg       "#e4e4ef")
-      (gruber-darker-fg+1     "#f4f4ff")
+      (gruber-darker-fg+1     "#8899FF")
       (gruber-darker-fg+2     "#f5f5f5")
       (gruber-darker-gray     "#444")
       (gruber-darker-gray+1   "#999")
       (gruber-darker-bg       "#181818")
-      (gruber-darker-bg+1     "#282828")
+      (gruber-darker-bg+1     "#202020")
       (gruber-darker-bg+2     "#453d41")
       (gruber-darker-bg+3     "#484848")
       (gruber-darker-bg+4     "#52494e")
       (gruber-darker-red-1    "#c73c3f")
       (gruber-darker-red      "#f43841")
+      (gruber-darker-pink     "PaleVioletRed1")
+      (gruber-darker-blue     "DodgerBlue")
       (gruber-darker-green    "#73c936")
       (gruber-darker-yellow   "#ffdd33")
       (gruber-darker-brown    "#cc8c3c")
+      (gruber-darker-orange   "coral1")
       (gruber-darker-sea-wave "#5f627f")
       (gruber-darker-quartz   "#95a99f")
       (gruber-darker-quartz+1 "#96a6c8")
@@ -61,118 +64,133 @@ a.k.a. rexim.")
    'gruber-darker
    '(frame-brackground-mode (quote dark)))
 
-  (custom-theme-set-faces
-   'gruber-darker
+  ( custom-theme-set-faces
+    'gruber-darker
 
-   ;; Standard font lock faces
-   `(default ((t (:foreground ,gruber-darker-fg :background ,gruber-darker-bg))))
-   `(cursor ((t (:foreground ,gruber-darker-yellow))))
-   `(font-lock-comment-face ((t (:foreground ,gruber-darker-brown))))
-   `(font-lock-comment-delimiter-face ((t (:foreground ,gruber-darker-brown))))
-   `(font-lock-doc-face ((t (:foreground ,gruber-darker-green))))
-   `(font-lock-doc-string-face ((t (:foreground ,gruber-darker-green))))
-   `(font-lock-string-face ((t (:foreground ,gruber-darker-green))))
-   `(font-lock-keyword-face ((t (:foreground ,gruber-darker-yellow :bold t))))
-   `(font-lock-builtin-face ((t (:foreground ,gruber-darker-yellow))))
-   `(font-lock-function-name-face ((t (:foreground ,gruber-darker-quartz+1))))
-   `(font-lock-variable-name-face ((t (:foreground ,gruber-darker-fg+1))))
-   `(font-lock-preprocessor-face ((t (:foreground ,gruber-darker-quartz))))
-   `(font-lock-constant-face ((t (:foreground ,gruber-darker-quartz))))
-   `(font-lock-type-face ((t (:foreground ,gruber-darker-quartz))))
-   `(font-lock-warning-face ((t (:foreground ,gruber-darker-red))))
-   `(font-lock-reference-face ((t (:foreground ,gruber-darker-quartz))))
-   `(trailing-whitespace ((t (:foreground ,gruber-darker-black :background ,gruber-darker-red))))
-   `(link ((t (:foreground ,gruber-darker-quartz+1 :underline t))))
-   `(link-visited ((t (:foreground ,gruber-darker-quartz+2 :underline t))))
+    ;; Standard font lock faces
+    `(default ((t (:foreground ,gruber-darker-fg :background ,gruber-darker-bg))))
+    `(font-lock-comment-face ((t (:foreground ,gruber-darker-brown))))
+    `(font-lock-comment-delimiter-face ((t (:foreground ,gruber-darker-brown))))
+    `(font-lock-doc-face ((t (:foreground ,gruber-darker-green))))
+    `(font-lock-doc-string-face ((t (:foreground ,gruber-darker-green))))
+    `(font-lock-string-face ((t (:foreground ,gruber-darker-green))))
+    `(font-lock-keyword-face ((t (:foreground ,gruber-darker-yellow))))
+    `(font-lock-builtin-face ((t (:foreground ,gruber-darker-yellow))))
+    `(font-lock-function-name-face ((t (:foreground ,gruber-darker-blue :bold t))))
+    `(font-lock-variable-name-face ((t (:foreground ,gruber-darker-fg+1))))
+    `(font-lock-preprocessor-face ((t (:foreground ,gruber-darker-quartz))))
+    `(font-lock-constant-face ((t (:foreground ,gruber-darker-quartz))))
+    `(font-lock-type-face ((t (:foreground ,gruber-darker-orange :bold t))))
+    `(font-lock-warning-face ((t (:foreground ,gruber-darker-red))))
+    `(font-lock-reference-face ((t (:foreground ,gruber-darker-quartz))))
+    `(trailing-whitespace ((t (:foreground ,gruber-darker-black :background ,gruber-darker-red))))
+    `(link ((t (:foreground ,gruber-darker-quartz+1 :underline t))))
+    `(link-visited ((t (:foreground ,gruber-darker-quartz+2 :underline t))))
 
-   ;; Search
-   `(isearch ((t (:foreground ,gruber-darker-black :background ,gruber-darker-fg+2))))
-   `(isearch-lazy-highlight-face ((t (:foreground ,gruber-darker-fg+1 :background ,gruber-darker-sea-wave))))
-   `(isearch-fail ((t (:foreground ,gruber-darker-black :background ,gruber-darker-red))))
+    ;; Search
+    `(isearch ((t (:foreground ,gruber-darker-black :background ,gruber-darker-fg+2))))
+    `(isearch-lazy-highlight-face ((t (:foreground ,gruber-darker-fg+1 :background ,gruber-darker-sea-wave))))
+    `(isearch-fail ((t (:foreground ,gruber-darker-black :background ,gruber-darker-red))))
 
-   ;; User interface
-   `(fringe ((t (:background ,gruber-darker-black+1 :foreground ,gruber-darker-gray))))
-   `(border ((t (:background ,gruber-darker-black+1 :foreground ,gruber-darker-gray))))
-   `(mode-line ((t (:background ,gruber-darker-bg+2 :foreground ,gruber-darker-white))))
-   `(mode-line-buffer-id ((t (:background ,gruber-darker-bg+2 :foreground ,gruber-darker-white))))
-   `(mode-line-inactive ((t (:background ,gruber-darker-bg+2 :foreground ,gruber-darker-gray+1))))
-   `(minibuffer-prompt ((t (:foreground ,gruber-darker-quartz+1))))
-   `(region ((t (:background ,gruber-darker-bg+3))))
-   `(secondary-selection ((t (:background ,gruber-darker-bg+3 :foreground ,gruber-darker-fg+1))))
-   `(tooltip ((t (:background ,gruber-darker-bg+4 :foreground ,gruber-darker-white))))
+    ;; User interface
+    `(fringe ((t (:background ,gruber-darker-black+1 :foreground ,gruber-darker-gray))))
+    `(border ((t (:background ,gruber-darker-black+1 :foreground ,gruber-darker-gray))))
+    `(mode-line ((t (:background ,gruber-darker-bg+2 :foreground ,gruber-darker-white))))
+    `(mode-line-buffer-id ((t (:background ,gruber-darker-bg+2 :foreground ,gruber-darker-white))))
+    `(mode-line-inactive ((t (:background ,gruber-darker-bg+2 :foreground ,gruber-darker-gray+1))))
+    `(minibuffer-prompt ((t (:foreground ,gruber-darker-quartz+1))))
+    `(region ((t (:background ,gruber-darker-bg+3))))
+    `(secondary-selection ((t (:background ,gruber-darker-bg+3 :foreground ,gruber-darker-fg+1))))
+    `(tooltip ((t (:background ,gruber-darker-bg+4 :foreground ,gruber-darker-white))))
 
-   ;; Custom
-   `(custom-state ((t (:foreground ,gruber-darker-green))))
+    ;; Custom
+    `(custom-state ((t (:foreground ,gruber-darker-green))))
+    `(cursor ((t (:background "#ffdd33"))))
 
-   ;; Parenthesis matching
-   `(show-paren-match-face ((t (:background ,gruber-darker-bg+4 :foreground ,gruber-darker-fg+1))))
-   `(show-paren-mismatch-face ((t (:foreground ,gruber-darker-fg+1 :background ,gruber-darker-red-1))))
+    ;; Parenthesis matching
+    `(show-paren-match-face ((t (:background ,gruber-darker-bg+4 :foreground ,gruber-darker-fg+1))))
+    `(show-paren-mismatch-face ((t (:foreground ,gruber-darker-fg+1 :background ,gruber-darker-red-1))))
 
-   ;; Line highlighting
-   `(highlight ((t (:background ,gruber-darker-bg+1 :foreground nil))))
-   `(highlight-current-line-face ((t (:background ,gruber-darker-bg+1 :foreground nil))))
+    ;; Line highlighting
+    `(highlight ((t (:background ,gruber-darker-bg+1 :foreground nil))))
+    `(highlight-current-line-face ((t (:background ,gruber-darker-bg+1 :foreground nil))))
 
-   ;; Calendar
-   `(holiday-face ((t (:foreground ,gruber-darker-red))))
+    ;; Calendar
+    `(holiday-face ((t (:foreground ,gruber-darker-red))))
 
-   ;; Info
-   `(info-xref ((t (:foreground ,gruber-darker-quartz+1))))
-   `(info-visited ((t (:foreground ,gruber-darker-quartz+2))))
+    ;; Info
+    `(info-xref ((t (:foreground ,gruber-darker-quartz+1))))
+    `(info-visited ((t (:foreground ,gruber-darker-quartz+2))))
 
-   ;; AUCTeX
-   `(font-latex-sectioning-5-face ((t (:foreground ,gruber-darker-quartz+1 :bold t))))
-   `(font-latex-bold-face ((t (:foreground ,gruber-darker-quartz :bold t))))
-   `(font-latex-italic-face ((t (:foreground ,gruber-darker-quartz :italic t))))
-   `(font-latex-math-face ((t (:foreground ,gruber-darker-green))))
-   `(font-latex-string-face ((t (:foreground ,gruber-darker-green))))
-   `(font-latex-warning-face ((t (:foreground ,gruber-darker-red))))
-   `(font-latex-slide-title-face ((t (:foreground ,gruber-darker-quartz+1))))
+    ;; AUCTeX
+    `(font-latex-sectioning-5-face ((t (:foreground ,gruber-darker-quartz+1 :bold t))))
+    `(font-latex-bold-face ((t (:foreground ,gruber-darker-quartz :bold t))))
+    `(font-latex-italic-face ((t (:foreground ,gruber-darker-quartz :italic t))))
+    `(font-latex-math-face ((t (:foreground ,gruber-darker-green))))
+    `(font-latex-string-face ((t (:foreground ,gruber-darker-green))))
+    `(font-latex-warning-face ((t (:foreground ,gruber-darker-red))))
+    `(font-latex-slide-title-face ((t (:foreground ,gruber-darker-quartz+1))))
 
-   ;; EShell
-   `(eshell-ls-directory ((t (:foreground ,gruber-darker-quartz+1))))
-   `(eshell-ls-symlink ((t (:foreground ,gruber-darker-yellow))))
-   `(eshell-ls-backup ((t (:foreground ,gruber-darker-quartz))))
+    ;; EShell
+    `(eshell-ls-directory ((t (:foreground ,gruber-darker-quartz+1))))
+    `(eshell-ls-symlink ((t (:foreground ,gruber-darker-yellow))))
+    `(eshell-ls-backup ((t (:foreground ,gruber-darker-quartz))))
 
-   ;; Dired
-   `(dired-directory ((t (:foreground ,gruber-darker-quartz+1 :weight bold))))
-   `(dired-ignored ((t (:foreground ,gruber-darker-quartz :inherit nil))))
+    ;; Dired
+    `(dired-directory ((t (:foreground ,gruber-darker-fg+1 :bold t))))
+    `(dired-flagged ((t (:foreground ,gruber-darker-red :bold t))))
+    `(dired-ignored ((t (:foreground ,gruber-darker-quartz :inherit nil))))
+    `(dired-symlink ((t (:foreground ,gruber-darker-pink :inherit nil))))
+    `(dired-header ((t (:foreground ,gruber-darker-orange :inherit nil))))
 
-   ;; ido-mode
-   `(ido-first-match ((t (:foreground ,gruber-darker-green :bold nil))))
-   `(ido-only-match ((t (:foreground ,gruber-darker-green))))
-   `(ido-subdir ((t (:foreground ,gruber-darker-quartz+1 :weight bold))))
+    ;; ido-mode
+    `(ido-first-match ((t (:foreground ,gruber-darker-green :bold nil))))
+    `(ido-only-match ((t (:foreground ,gruber-darker-green))))
+    `(ido-subdir ((t (:foreground ,gruber-darker-quartz+1 :weight bold))))
 
-   ;; Compilation
-   `(compilation-info ((t (:foreground ,gruber-darker-green :inherit nil))))
+    ;; Compilation
+    `(compilation-info ((t (:foreground ,gruber-darker-green :inherit nil))))
 
-   ;; egg
-   `(egg-text-base ((t (:foreground ,gruber-darker-fg))))
-   `(egg-help-header-1 ((t (:foreground ,gruber-darker-yellow))))
-   `(egg-help-header-2 ((t (:foreground ,gruber-darker-quartz+1))))
-   `(egg-branch ((t (:foreground ,gruber-darker-yellow))))
-   `(egg-branch-mono ((t (:foreground ,gruber-darker-yellow))))
-   `(egg-term ((t (:foreground ,gruber-darker-yellow))))
-   `(egg-diff-add ((t (:foreground ,gruber-darker-green))))
-   `(egg-diff-del ((t (:foreground ,gruber-darker-red))))
-   `(egg-diff-file-header ((t (:foreground ,gruber-darker-quartz+2))))
-   `(egg-section-title ((t (:foreground ,gruber-darker-yellow))))
+    ;; egg
+    `(egg-text-base ((t (:foreground ,gruber-darker-fg))))
+    `(egg-help-header-1 ((t (:foreground ,gruber-darker-yellow))))
+    `(egg-help-header-2 ((t (:foreground ,gruber-darker-quartz+1))))
+    `(egg-branch ((t (:foreground ,gruber-darker-yellow))))
+    `(egg-branch-mono ((t (:foreground ,gruber-darker-yellow))))
+    `(egg-term ((t (:foreground ,gruber-darker-yellow))))
+    `(egg-diff-add ((t (:foreground ,gruber-darker-green))))
+    `(egg-diff-del ((t (:foreground ,gruber-darker-red))))
+    `(egg-diff-file-header ((t (:foreground ,gruber-darker-quartz+2))))
+    `(egg-section-title ((t (:foreground ,gruber-darker-yellow))))
 
-   ;; message
-   `(message-header-name ((t (:foreground ,gruber-darker-green))))
-   ))
+    ;; message
+    `(message-header-name ((t (:foreground ,gruber-darker-green))))
+
+    ;; ruby
+    `(ruby-string-delimiter-face ((t (:foreground ,gruber-darker-green))))
+    `(ruby-op-face ((t (:foreground "burlywood"))))
+    `(erm-syn-errline ((t (:underline "Red"))))
+    `(erm-syn-warnline ((t (:underline "Orange"))))
+
+    ;; magit
+    `(diff-added ((t (:inherit diff-changed :foreground "light green" :inverse-video nil :underline nil :slant normal :weight normal))))
+    `(diff-changed ((t (:foreground "#b58900" :background nil :inverse-video nil :underline nil :slant normal :weight normal)))))
+
 
 
 ;;;###autoload
-(when load-file-name
-  (add-to-list 'custom-theme-load-path
-               (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'gruber-darker)
+  (when load-file-name
+    (add-to-list 'custom-theme-load-path
+                 (file-name-as-directory (file-name-directory load-file-name))))
 
-;; Local Variables:
-;; no-byte-compile: t
-;; indent-tabs-mode: nil
-;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
-;; End:
+  (provide-theme 'gruber-darker)
+
+  ;; Local Variables:
+  ;; no-byte-compile: t
+  ;; indent-tabs-mode: nil
+  ;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
+  ;; End:
 
 ;;; gruber-darker-theme.el ends here.
+  )
