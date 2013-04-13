@@ -66,8 +66,8 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
     `(link-visited ((t (:foreground ,jell-quartz+2 :underline t))))
 
     ;; Search
-    `(isearch ((t (:foreground ,jell-black :background ,jell-fg+2))))
-    `(isearch-lazy-highlight-face ((t (:foreground ,jell-fg+1 :background ,jell-sea-wave))))
+    `(isearch ((t (:background ,jell-blue :bold t))))
+    `(isearch-lazy-highlight-face ((t (:foreground ,jell-fg+2 :background ,jell-sea-wave))))
     `(isearch-fail ((t (:foreground ,jell-black :background ,jell-red))))
 
     ;; User interface
@@ -90,6 +90,8 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
     `(highlight ((t (:background ,jell-bg+1 :foreground nil))))
     `(highlight-current-line-face ((t (:background ,jell-bg+1 :foreground nil))))
     `(hl-line ((t (:background ,jell-bg+1))))
+    `(lazy-highlight ((t (:background ,jell-bg+2 :foreground nil))))
+
 
     ;; Calendar
     `(holiday-face ((t (:foreground ,jell-red))))
@@ -152,6 +154,18 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
     `(mode-line ((t (:background ,jell-bg+2))))
     `(mode-line-inactive ((t (:background ,jell-bg+15))))
     `(mode-line-buffer-id ((t (:background ,jell-bg+2 :foreground ,jell-white))))
+
+    ;; Multiple cursors
+    `(mc/cursor-face ((t (:inherit cursor :foreground ,jell-bg))))
+    `(mc/region-face ((t (:inherit region))))
+
+
+    ;; evil
+    `(evil-ex-info ((t (:slant italic :foreground "red"))))
+    `(evil-ex-lazy-highlight ((t (:inherit lazy-highlight))))
+    `(evil-ex-search ((t (:inherit isearch))))
+    `(evil-ex-substitute-matches ((t (:background ,jell-bg+15 :foreground ,jell-red :underline t))))
+    `(evil-ex-substitute-replacement ((t (:background ,jell-bg+15 :foreground ,jell-green :underline t))))
 
     ;; magit
     `(diff-added ((t (:inherit diff-changed :foreground ,jell-green :inverse-video nil :underline nil :slant normal :weight normal))))
