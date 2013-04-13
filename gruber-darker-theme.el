@@ -173,24 +173,36 @@ a.k.a. rexim.")
     `(erm-syn-warnline ((t (:underline "Orange"))))
 
     ;; magit
-    `(diff-added ((t (:inherit diff-changed :foreground "light green" :inverse-video nil :underline nil :slant normal :weight normal))))
-    `(diff-changed ((t (:foreground "#b58900" :background nil :inverse-video nil :underline nil :slant normal :weight normal)))))
+    `(diff-added ((t (:inherit diff-changed :foreground ,gruber-darker-green :inverse-video nil :underline nil :slant normal :weight normal))))
+    `(diff-changed ((t (:foreground "#b58900" :background nil :inverse-video nil :underline nil :slant normal :weight normal))))
+    `(diff-file-header ((t (:background ,gruber-darker-bg+1 :foreground ,gruber-darker-fg+1 :weight bold))))
+    `(diff-header ((t (:foreground "LightYellow3"))))
+    `(diff-hunk-header ((t (:foreground "wheat4"))))
+    `(diff-refine-change ((t (:foreground nil :background nil :inverse-video t :underline nil :slant normal :weight normal))))
+    `(diff-removed ((t (:inherit diff-changed :foreground ,gruber-darker-red :inverse-video nil :underline nil :slant normal :weight normal))))
+    `(magit-diff-add ((t (:inherit diff-added))))
+    `(magit-branch ((t (:foreground ,gruber-darker-quartz+1))))
+    `(magit-section-title ((t (:foreground ,gruber-darker-yellow))))
+    `(magit-item-highlight ((t (:inherit highlight))))
+    `(magit-log-head-label-remote ((t (:foreground ,gruber-darker-green :box t))))
+    `(magit-log-head-label-local ((t (:foreground ,gruber-darker-blue :box t))))
+    `(magit-log-graph ((t (:foreground ,gruber-darker-quartz))))
 
+    `(magit-diff-del ((t (:inherit diff-removed))))))
 
 
 ;;;###autoload
 
-  (when load-file-name
-    (add-to-list 'custom-theme-load-path
-                 (file-name-as-directory (file-name-directory load-file-name))))
+(when load-file-name
+  (add-to-list 'custom-theme-load-path
+               (file-name-as-directory (file-name-directory load-file-name))))
 
-  (provide-theme 'gruber-darker)
+(provide-theme 'gruber-darker)
 
-  ;; Local Variables:
-  ;; no-byte-compile: t
-  ;; indent-tabs-mode: nil
-  ;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
-  ;; End:
+;; Local Variables:
+;; no-byte-compile: t
+;; indent-tabs-mode: nil
+;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
+;; End:
 
 ;;; gruber-darker-theme.el ends here.
-  )
