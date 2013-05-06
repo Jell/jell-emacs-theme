@@ -22,6 +22,7 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
       (jell-bg       "#181818")
       (jell-bg+1     "#202020")
       (jell-bg+15    "#252525")
+      (jell-bg+17    "#403540")
       (jell-bg+2     "#453d41")
       (jell-bg+3     "#484848")
       (jell-bg+4     "#52494e")
@@ -87,10 +88,10 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
     `(show-paren-mismatch-face ((t (:foreground ,jell-fg+1 :background ,jell-red-1))))
 
     ;; Line highlighting
-    `(highlight ((t (:background ,jell-bg+1 :foreground nil))))
-    `(highlight-current-line-face ((t (:background ,jell-bg+1 :foreground nil))))
-    `(hl-line ((t (:background ,jell-bg+1))))
-    `(lazy-highlight ((t (:background ,jell-bg+2 :foreground nil))))
+    `(highlight ((t (:background ,jell-bg+17 :foreground nil))))
+    `(highlight-current-line-face ((t (:background ,jell-bg+17 :foreground nil))))
+    `(hl-line ((t (:background ,jell-bg+17))))
+    `(lazy-highlight ((t (:background ,jell-bg+17 :foreground nil))))
 
 
     ;; Calendar
@@ -111,7 +112,7 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
 
     ;; EShell
     `(eshell-ls-directory ((t (:foreground ,jell-quartz+1))))
-    `(eshell-ls-symlink ((t (:foreground ,jell-yellow))))
+    `(eshell-ls-symlink ((t (:foreground ,jell-pink))))
     `(eshell-ls-backup ((t (:foreground ,jell-quartz))))
 
     ;; Dired
@@ -183,7 +184,11 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
     `(magit-log-head-label-remote ((t (:foreground ,jell-green :box t))))
     `(magit-log-head-label-local ((t (:foreground ,jell-blue :box t))))
     `(magit-log-graph ((t (:foreground ,jell-quartz))))
-    `(magit-diff-del ((t (:inherit diff-removed))))))
+    `(magit-diff-del ((t (:inherit diff-removed))))
+
+    ;; ERC
+    `(erc-prompt-face ((t (:foreground ,jell-quartz))))
+    ))
 
 
 ;;;###autoload
