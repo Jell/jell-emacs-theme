@@ -30,6 +30,8 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
       (jell-red      "#f43841")
       (jell-pink     "PaleVioletRed1")
       (jell-blue     "DodgerBlue")
+      (jell-blue-1   "DodgerBlue3")
+      (jell-blue-2   "DodgerBlue4")
       (jell-green    "#73c936")
       (jell-yellow   "#ffdd33")
       (jell-brown    "#cc8c3c")
@@ -67,8 +69,8 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
     `(link-visited ((t (:foreground ,jell-quartz+2 :underline t))))
 
     ;; Search
-    `(isearch ((t (:background ,jell-blue :bold t))))
-    `(isearch-lazy-highlight-face ((t (:foreground ,jell-fg+2 :background ,jell-sea-wave))))
+    `(isearch ((t (:background ,jell-blue-2 :bold t))))
+    `(isearch-lazy-highlight-face ((t (:foreground ,jell-blue-2 :background ,jell-sea-wave))))
     `(isearch-fail ((t (:foreground ,jell-black :background ,jell-red))))
 
     ;; User interface
