@@ -188,6 +188,9 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
     `(magit-log-graph ((t (:foreground ,jell-quartz))))
     `(magit-diff-del ((t (:inherit diff-removed))))
 
+    ;; smartparens
+    `(sp-show-pair-match-face ((t (:inherit show-paren-match-face))))
+
     ;; ERC
     `(erc-prompt-face ((t (:foreground ,jell-quartz))))
     ))
