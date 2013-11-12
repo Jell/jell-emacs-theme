@@ -148,6 +148,8 @@ a.k.a. rexim. Changed to fit the needs of Jell.")
     `(message-header-name ((t (:foreground ,jell-green))))
 
     ;; ruby
+    `(enh-ruby-string-delimiter-face ((t (:foreground ,jell-green))))
+    `(enh-ruby-op-face ((t (:foreground "burlywood"))))
     `(ruby-string-delimiter-face ((t (:foreground ,jell-green))))
     `(ruby-op-face ((t (:foreground "burlywood"))))
     `(erm-syn-errline ((t (:underline "Red"))))
