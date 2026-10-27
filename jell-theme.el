@@ -1,4 +1,4 @@
-;;; jell-theme.el ---
+;;; jell-theme.el --- -*- lexical-binding: t; -*-
 
 ;; Theme stolen and improved from Gruber Darker color theme for Emacs 24
 ;; URL: http://github.com/rexim/gruber-darker-theme
